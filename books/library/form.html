@@ -1,0 +1,30 @@
+<div id="main" align="center">
+<h1><font color=blue>请添加图书！！！</font></h1>
+</div>
+<form action="/add/" method="post">
+<table border=1 align="center">
+ <tr>
+  <th>AuthorID_FK</th><th>Name</th><th>Age</th><th>Country</th>
+ </tr>
+ <tr>
+  <td><input name="AuthorID_FK" type="text"></td>
+  <td><input name="Name" type="text"></td>
+  <td><input name="Age" type="text"></td>
+  <td><input name="Country" type="text"></td>
+ </tr>
+ <tr>
+  <th>ISBN_PK</th><th>Title</th><th>Publisher</th><th>PublishDate</th><th>Price</th>
+ </tr>
+ <tr>
+  <td><input name="ISBN_PK" type="text"></td>
+  <td><input name="Title" type="text"></td>
+  <td><input name="Publisher" type="text"></td>
+  <td><input name="PublishDate" type="text"></td>
+  <td><input name="Price" type="text"></td>
+  <td><input type="submit" value="保存" > <input type="reset" value="重填"></td>
+ </tr>
+</table>
+</form>
+<div>
+ <a href="/book/">返回图书列表</a>
+</div>

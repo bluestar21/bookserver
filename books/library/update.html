@@ -1,0 +1,21 @@
+<form method="post">
+<table border=1 align="center">
+ <tr>
+  <th>ISBN_PK</th><th>Title</th><th>Author</th><th>Publisher</th><th>PublishDate</th><th>Price</th>
+ </tr>
+{% for book in book_list %}
+ <tr>
+  <td><input name="ISBN_PK" type="text" value="{{book.ISBN_PK}}"></td>
+  <td><input name="Title" type="text" value="{{book.Title}}"></td>
+  <td><input name="Name" type="text" value="{{book.AuthorID_FK.Name}}"></td>
+  <td><input name="Publisher" type="text" value="{{book.Publisher}}"></td>
+  <td><input name="PublishDate" type="text" value="{{book.PublishDate}}"></td>
+  <td><input name="Price" type="text" value="{{book.Price}}"></td>
+  <td><input type="submit" value="保存"> <input type="reset" value="重填"></td>
+ </tr>
+{% endfor %}
+<div>
+ <a href="/book/">返回图书列表</a>
+</div>
+</table>
+</form>

@@ -1,0 +1,36 @@
+<table border=1 align="center">
+ <tr>
+  <th>ISBN_PK</th><th>Title</th><th>Publisher</th><th>PublishDate</th><th>Price</th><th>action</th>
+ </tr>
+{% for book in itsdetails %}
+<form action="/delete/" method="get">
+ <tr>
+  <td>{{ book.ISBN_PK }}</td>
+  <td>{{ book.Title }}</td>
+  <td>{{ book.Publisher }}</td>
+  <td>{{ book.PublishDate }}</td>
+  <td>{{ book.Price }}</td>
+  <td><a href="/delete/?id={{book.id}}" action="/delete/" method="get">删除</a>
+      <a href="/update/?id={{book.id}}" action="/update/" method="post">更新</a></td>
+ </tr>
+</form>
+{% endfor %}
+</table>
+<table border=1 align="center">
+ <tr>
+  <th>AuthorID_FK</th><th>Name</th><th>Age</th><th>Country</th>
+ </tr>
+{% for book in itsdetails %}
+<form action="/delete/" method="get">
+ <tr>
+  <td>{{ book.AuthorID_FK.AuthorID_FK }}</td>
+  <td>{{ book.AuthorID_FK.Name }}</td>
+  <td>{{ book.AuthorID_FK.Age }}</td>
+  <td>{{ book.AuthorID_FK.Country }}</td>
+ </tr>
+</form>
+{% endfor %}
+</table>
+<div align="center">
+<a href="/book/">返回图书列表</a>
+</div>

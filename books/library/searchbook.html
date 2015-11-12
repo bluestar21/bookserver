@@ -1,0 +1,16 @@
+<form method="get">
+<table border=1 align="center">
+ <tr>
+  <th>Title</th><th>Author</th>
+ </tr>
+{% for book in searchlist %}
+ <tr>
+     <td><a href="/theirbook/?id={{book.id}}" action="/theirbook/" method="get">{{ book.Title }}</a></td>
+	 <td>{{book.AuthorID_FK.Name}}</td>
+ </tr>
+{% endfor %}
+</table>
+</form>
+<div>
+ <a href="/book/">图书列表</a>
+</div>

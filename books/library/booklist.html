@@ -1,0 +1,34 @@
+<div id="main" align="center">
+<h1><font color=green>欢迎来到图书管理系统！！！</font></h1>
+</div>
+<table border=1 align="center">
+<div align="center">
+  <form action="/search/" method="get">
+    <select name="select">
+      <option value="name">作者</option>
+    </select>
+    <input type="text" name="search">
+    <input type="submit" value="搜索">
+  </form>
+</div>
+ <tr>
+  <th>ISBN_PK</th><th>Title</th><th>Name</th><th>Publisher</th><th>PublishDate</th><th>Price</th><th>action</th>
+ </tr>
+{% for book in book_list %}
+<form action="/delete/" method="get">
+ <tr>
+  <td>{{ book.ISBN_PK }}</td>
+  <td>{{ book.Title }}</td>
+  <td>{{ book.AuthorID_FK.Name }}</td>
+  <td>{{ book.Publisher }}</td>
+  <td>{{ book.PublishDate }}</td>
+  <td>{{ book.Price }}</td>
+  <td><a href="/delete/?id={{book.id}}" action="/delete/" method="get">删除</a>
+      <a href="/update/?id={{book.id}}" action="/update/" method="get">更新</a></td>
+ </tr>
+</form>
+{% endfor %}
+</table>
+<div align="center">
+<a href="/form/"><h1><font color=blue>添加书目</font></h1></a>
+</div>

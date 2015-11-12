@@ -1,0 +1,20 @@
+<div id="main" align="center">
+<h1><font color=red>您输入的作者不在图书管理系统中，请添加作者！！！</font></h1>
+</div>
+<form action="/addauthor/"  method="post">
+<table border=1 align="center">
+ <tr>
+  <th>AuthorID_FK</th><th>Name</th><th>Age</th><th>Country</th>
+ </tr>
+ <tr>
+  <td><input name="AuthorID_FK" type="text"></td>
+  <td><input name="Name" type="text"></td>
+  <td><input name="Age" type="text"></td>
+  <td><input name="Country" type="text"></td>
+  <td><input type="submit" value="保存"> <input type="reset" value="重填"></td>
+ </tr>
+</table>
+</form>
+<div>
+ <a href="/book/">返回图书列表</a>
+</div>
